@@ -156,7 +156,7 @@
     background-color:var(--third-color);
     right: 0;
     left: 0;
-    top: 80px;
+    top: 77px;
     text-align: center;
     padding: 16px 0;
    }
@@ -180,7 +180,7 @@
 
    /* Header */
    .main-header {
-    background: url('./img/saudi-bg.svg') top center no-repeat fixed;
+    background: url('./img/saudi-bg.svg') top center no-repeat;
     background-size: cover;
     width: 100%;
     height: 85vh;
@@ -584,6 +584,16 @@
       width: 100%;
       order: -1;
     }
+    .main-header .header-info {
+    margin-bottom: 20px;
+    gap: 0;
+   }
+   .main-header .header-info .details {
+    gap: 0;
+   }
+   .main-header .header-info .details h3 {
+    padding-left: 10px;
+   }
    }
    @media screen and (max-width: 767px) {
     .container {
@@ -611,7 +621,7 @@
       align-items: flex-start;
     }
     .main-header .header-info .details h3 {
-      font-size: 14px;
+      font-size: 13px;
     }
     .about .about-details .about-side h2,
     .speakers h2,
@@ -692,9 +702,6 @@
     }
     .agenda .agenda-details .date .month h3, .agenda .agenda-details .date .month p {
       font-size: 26px;
-    }
-    .main-header .title {
-      font-size: 34px;
     }
     .main-header .header-tag h3 {
       font-size: 20px;
