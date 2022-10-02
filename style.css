@@ -167,7 +167,7 @@
    .menu li + li {
     margin-top: 12px;
    }
-   input[type=checkbox]:checked ~ .menu{
+   input[type=checkbox]:checked ~ .menu {
     display: block;
     position: fixed;
     z-index: 99;
@@ -676,6 +676,9 @@
     }
     .agenda .agenda-details .date {
       margin-bottom: 20px;
+    }
+    .agenda .agendas .side-time .event-details p {
+      font-size: 14px;
     }
    }
    @media screen and (max-width: 484px) {
