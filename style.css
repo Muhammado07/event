@@ -1,0 +1,717 @@
+/* Designed By: Mohamed Ali 2022
+
+==================================
+======= Johnson Controls Arabia ==========
+==================================
+
+*/
+
+/* Main Fonts */
+
+@font-face {
+    font-family: "Maurea-BoldLf";
+    src: url("./fonts/Maurea-BoldLf.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Maurea-Light";
+    src: url("./fonts/Maurea-Light.otf") format("opentype");
+    font-weight: lighter;
+    font-style: normal;
+  }
+  :root {
+    --first-color: #00539e;
+    --second-color: #151515;
+    --third-color: #ffffff;
+    --fourth-color: #FDBC38;
+    --fifth-color: #222222;
+  }
+  *,
+  ::after,
+  ::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Maurea-Medium", sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #fbfbfb;
+    outline: none;
+  }
+  *,
+  a,
+  div,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  html,
+  img,
+  li,
+  p,
+  span {
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
+  }
+  .container {
+    width: 100%;
+    padding-right: 70px;
+    padding-left: 70px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    max-width: 1920px;
+    margin: auto;
+  }
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    color: var(--second-color);
+  }
+  input {
+    outline: none;
+  }
+/* Navbar */
+.navy {
+    background-color: var(--third-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 99;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    
+   }
+   .nav-links a {
+    color: var(--second-color);
+    font-family: "Maurea-Light";
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+   }
+   /* LOGO */
+   .logo {
+    width: 121px;
+    height: auto;
+   }
+   .logo img {
+    width: 100%;
+    height: 100%;
+   }
+   .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+   }
+   .menu li:not(:last-child) a:hover {
+    color: var(--first-color);
+   }
+   .navbar .menu li:last-child a {
+    color: var(--third-color);
+    background: var(--first-color);
+    border-radius: 4px;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+   }
+   .navbar .menu li:last-child a:hover {
+    background: var(--fourth-color);
+   }
+   .menu li {
+    padding: 10px;
+   }
+   input[type=checkbox]{
+    display: none;
+   } 
+   /*HAMBURGER MENU*/
+   .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+   }
+   /* APPLYING MEDIA QUERIES */
+   @media (max-width: 768px) {
+   .menu { 
+    display:none;
+    position: absolute;
+    background-color:var(--third-color);
+    right: 0;
+    left: 0;
+    top: 80px;
+    text-align: center;
+    padding: 16px 0;
+   }
+   .menu li {
+    text-align: left;
+    margin-left: 15px;
+   }
+   .menu li + li {
+    margin-top: 12px;
+   }
+   input[type=checkbox]:checked ~ .menu{
+    display: block;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+   }
+   .hamburger {
+    display: block;
+   }
+   }
+
+   /* Header */
+   .main-header {
+    background: url('./img/saudi-bg.jpg') top center no-repeat fixed;
+    background-size: cover;
+    width: 100%;
+    height: 85vh;
+    position: relative;
+    margin-top: 100px;
+    color: var(--third-color);
+    font-family: "Maurea-Light";
+    font-weight: 500;
+   }
+   .main-header .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+   }
+   .main-header .header > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   }
+   .main-header .title {
+    font-size: 75px;
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Maurea-BoldLf";
+    font-weight: 600;
+   }
+   .main-header .header-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 32px;
+   }
+   .main-header .header-tag h3 {
+    font-size: 26px;
+   }
+   .main-header .register-now {
+    font-family: "Maurea-Light";
+    font-weight: 600;
+    margin: 40px 0 60px;
+   }
+   .main-header .register-now a {
+    font-size: 18px;
+    color: var(--first-color);
+    background: var(--third-color);
+    border-radius: 4px;
+    padding: 15px 40px;
+    transition: all 0.3s ease-in-out;
+   }
+   .main-header .register-now a:hover {
+    background: var(--fourth-color);
+    color: var(--third-color);
+   }
+   .main-header .header-info,
+   .main-header .header-info .details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+   }
+   .main-header .header-info {
+    gap: 30px;
+   }
+   /* About */
+   .about,
+   .speakers {
+    background: #111111;
+    padding: 60px 0;
+    font-family: "Maurea-Light";
+    font-weight: 500;
+    position: relative;
+    color: var(--third-color);
+   }
+   .about .about-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+   }
+   .about .about-details .about-side h2 {
+    font-size: 62px;
+    padding-bottom: 20px;
+    font-family: "Maurea-BoldLf";
+    font-weight: 600;
+   }
+   .about .about-details .about-side .more {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 32px;
+    font-family: "Maurea-Light";
+    font-weight: 500;
+   }
+   .about .about-details .about-side .features {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+   }
+   .about .about-details .about-side .features .about-feature {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .about .about-details .about-side .features .about-feature .main-img {
+    width: 100%;
+    height: 100%;
+   }
+   .about .about-details .about-side .features .about-feature .main-img img {
+    width: 100%;
+    height: 100%;
+   }
+   .about .about-details .about-side .features .about-feature .dey {
+    padding: 20px 15px;
+   }
+   .about .about-details .about-side .features .about-feature .dey h3 {
+    font-size: 18px;
+    line-height: 1.3;
+    padding-bottom: 8px;
+   }
+   .about .about-details .about-side .features .about-feature .dey p {
+    font-size: 12px;
+    opacity: 0.85;
+   }
+   .about .about-details .main-register {
+    background: linear-gradient(210.36deg, #3D3D3D 1.64%, var(--fifth-color) 96.96%);
+    border-radius: 24px;
+    padding: 20px 30px;
+    font-family: "Maurea-Light";
+    font-weight: 500;
+    color: var(--third-color);
+   }
+   .about .about-details .main-register h3 {
+    font-size: 26px;
+    margin-bottom: 32px;
+    text-align: center;
+   }
+   .about .about-details .main-register {
+    width: 70%;
+    margin: 0 auto;
+   }
+   .about .about-details .main-register .formbox {
+    width: 80%;
+    margin: 0 auto;
+   }
+   .about .about-details .main-register .formbox form {
+    width: 100%;
+   }
+   .about .about-details .main-register .formbox form .input-box {
+    margin-bottom: 16px;
+    width: 100%;
+   }
+   .about .about-details .main-register .formbox form .input-box p {
+    font-size: 16px;
+    padding-bottom: 6px;
+    opacity: 0.95;
+   }
+   .about .about-details .main-register .formbox form .input-box span {
+    font-size: 12px;
+   }
+   .about .about-details .main-register .formbox form .input-box input {
+    width: 100%;
+    margin-bottom: 0px;
+    padding: 10px 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    background-color: var(--third-color);
+    outline: none;
+   }
+   input::-webkit-outer-spin-button,
+   input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+   }
+   .about .about-details .main-register .formbox form .input-boxs {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .about .about-details .main-register .formbox form .input-boxs input {
+    background: var(--first-color);
+    color: var(--third-color);
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    border-color: transparent;
+    outline: none;
+    padding: 16px 20px;
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 70%;
+    transition: all 0.3s ease-in-out;
+   }
+   .about .about-details .main-register .formbox form .input-boxs input:hover {
+    background: var(--fourth-color);
+   }
+   .about.attend {
+    padding: 60px 0;
+    background: var(--third-color);
+   }
+   .about.attend .about-side {
+    color: var(--second-color);
+   }
+   .about.attend .about-side .features {
+    gap: 70px;
+    text-align: center;
+   }
+   .about.attend .about-side .features p {
+    font-weight: 600;
+    font-size: 22px;
+    padding-top: 8px;
+   }
+   .about.attend .attend-img {
+    width: 80%;
+    margin: 0 auto;
+   }
+   .about.attend .sidey-img,
+   .about.attend .sidey-img img{
+    width: 100%;
+    height: 100%;
+   }
+   .about.attend .register-now {
+    margin-top: 40px;
+   }
+   .about.attend .register-now a {
+    background: var(--first-color);
+    color: var(--third-color);
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    border-color: transparent;
+    outline: none;
+    padding: 15px 40px;
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+   }
+   .about.attend .register-now a:hover {
+    background: var(--fourth-color);
+   }
+   .speakers h2 {
+    font-size: 62px;
+    padding-bottom: 20px;
+    font-family: "Maurea-BoldLf";
+    font-weight: 600;
+    text-align: center;
+   }
+   .speakers .speaker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-top: 32px;
+    width: 85%;
+    margin: 0 auto;
+   }
+   .speakers .speaker .details {
+    background: var(--fifth-color);
+    border-radius: 16px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+   }
+   .speakers .speaker .details img {
+    width: 160px;
+    height: 160px;
+   }
+   .speakers .speaker .details h3 {
+    font-weight: 500;
+    font-size: 29px;
+    line-height: 150%;
+    padding-bottom: 8px;
+   }
+   .speakers .speaker .details p {
+    font-size: 16px;
+    line-height: 150%;
+    opacity: 0.85;
+   }
+   .agenda {
+    padding: 60px 0;
+    font-family: "Maurea-Light";
+    font-weight: 500;
+    position: relative;
+    background: var(--third-color);
+   }
+   .agenda h2 {
+    font-size: 62px;
+    padding-bottom: 32px;
+    font-family: "Maurea-BoldLf";
+    font-weight: 600;
+   }
+   .agenda .agenda-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+   }
+   .agenda .agenda-details .date {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 50px;
+   }
+   .agenda .agenda-details .date .day {
+    background: var(--fifth-color);
+    width: 150px;
+    height: 150px;
+    color: var(--third-color);
+    text-align: center;
+    border-radius: 16px;
+    line-height: 60px;
+   }
+   .agenda .agenda-details .date .day p {
+    font-size: 22px;
+    padding-bottom: 0;
+   }
+   .agenda .agenda-details .date .day h2 {
+    padding-bottom: 0;
+    font-size: 80px;
+   }
+   .agenda .agenda-details .date .month h3,
+   .agenda .agenda-details .date .month p {
+    font-size: 36px;
+    font-weight: 400;
+   }
+   .agenda .agendas {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 32px;
+   }
+   .agenda .agendas .side-time {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+   }
+   .agenda .agendas .side-time .agend-img {
+    width: 40px;
+    height: 40px;
+    background: var(--second-color);
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .agenda .agendas .side-time .agend-img img {
+    width: 24px;
+    height: 24px;
+    text-align: center;
+   }
+   .agenda .agendas .side-time .event-details h3 {
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    font-family: "Maurea-BoldLf";
+   }
+   .agenda .agendas .side-time .event-details p {
+    font-size: 16px;
+   }
+
+.footer {
+  background: #fbfbfb;
+  padding: 20px;
+  font-family: "Maurea-Light";
+}
+.footer .footy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .footy p {
+  font-size: 14px;
+  text-align: center;
+}
+   @media screen and (max-width: 1199px) {
+    .main-header {
+      height: 100%;
+    }
+    .main-header .title {
+      font-size: 48px;
+    }
+    .about .about-details,
+    .agenda .agenda-details {
+      grid-template-columns: 1fr;
+    }
+    .about .about-details .main-register {
+      width: 100%;
+      order: -1;
+    }
+   }
+   @media screen and (max-width: 767px) {
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .about.attend,.about, .speakers, .agenda {
+      padding: 30px 0;
+    }
+    .main-header .title {
+      font-size: 38px;
+      width: 100%;
+    }
+    .main-header .header-tag h2,
+    .about .about-details .about-side .more {
+      font-size: 16px;
+    }
+    .main-header .header-tag {
+      margin-top: 16px;
+    }
+    .main-header .header-info,
+    .speakers .speaker{
+      flex-direction: column;
+      gap: 15px;
+      align-items: flex-start;
+    }
+    .main-header .header-info .details h3 {
+      font-size: 14px;
+    }
+    .about .about-details .about-side h2,
+    .speakers h2,
+    .agenda h2 {
+      font-size: 36px;
+    }
+    .about.attend .attend-img,
+    .about.attend .sidey-img,
+    .about.attend .sidey-img img {
+      width: 100%;
+    }
+    .speakers .speaker .details h3 {
+      font-size: 18px;
+    }
+    .speakers .speaker .details p {
+      font-size: 14px;
+    }
+    .speakers .speaker,
+    .about .about-details .main-register .formbox {
+      width: 100%;
+    }
+    .about.attend .about-details .about-side .features {
+      flex-direction: row;
+      justify-content: space-around;
+      gap: 15px;
+    }
+    .about.attend .about-details .about-side .features img {
+      width: 50px;
+      height: 50px;
+    }
+    .about.attend .about-details .about-side .features p {
+      font-size: 18px;
+      text-align: center;
+      width: 100%;
+    }
+    .speakers .speaker .details img {
+      width: 80px;
+      height: 80px;
+    }
+    .about .about-details .about-side .features {
+      flex-direction: column;
+    }
+    .agenda .agenda-details .date {
+      margin-bottom: 20px;
+    }
+   }
+   @media screen and (max-width: 484px) {
+    .about .about-details .about-side .features .about-feature .dey h3,
+    .speakers .speaker .details h3 {
+      font-size: 14px;
+    }
+    .speakers .speaker .details p {
+      font-size: 12px;
+    }
+    .about .about-details .about-side .features .about-feature {
+      width: 100%;
+      height: 100%;
+    }
+    .about .about-details .about-side .features .about-feature .main-img img {
+      object-fit: cover;
+    }
+    .about .about-details .about-side h2, .speakers h2, .agenda h2 {
+      font-size: 26px;
+    }
+    .agenda .agenda-details .date .day {
+      width: 100px;
+      height: 100px;
+    }
+    .agenda .agenda-details .date .day h2 {
+      font-size: 40px;
+      line-height: 0.3;
+    }
+    .agenda .agenda-details .date .day p {
+      font-size: 18px;
+    }
+    .agenda .agenda-details .date .month h3, .agenda .agenda-details .date .month p {
+      font-size: 26px;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    .main-header .title {
+      font-size: 24px;
+    }
+  }
+  .success {
+    text-align: center;
+    line-height: 1.4;
+  }
+  .success .img {
+    width: 160px;
+    margin: 0 auto;
+    height: 160px;
+  }
+  .success .img img {
+    width: 100%;
+    height: 100%;
+  }
+  @media screen and (max-width: 767px) {
+    .success .img {
+      width: 120px;
+      height: 120px;
+    }
+  }
