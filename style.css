@@ -270,12 +270,16 @@
     font-family: "Maurea-BoldLf";
     font-weight: 600;
    }
+   
    .about .about-details .about-side .more {
     font-size: 20px;
     line-height: 1.4;
     margin-bottom: 32px;
     font-family: "Maurea-Light";
     font-weight: 500;
+   }
+   .about.attend .about-details .about-side .more {
+    margin-bottom: 8px;
    }
    .about .about-details .about-side .features {
     display: flex;
@@ -672,10 +676,6 @@
     }
    }
    @media screen and (max-width: 484px) {
-    .about .about-details .about-side .features .about-feature .dey h3,
-    .speakers .speaker .details h3 {
-      font-size: 14px;
-    }
     .speakers .speaker .details p {
       font-size: 12px;
     }
