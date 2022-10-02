@@ -623,6 +623,9 @@
     .about.attend .sidey-img img {
       width: 100%;
     }
+    .speakers .speaker .details {
+      width: 100%;
+    }
     .speakers .speaker .details h3 {
       font-size: 18px;
     }
