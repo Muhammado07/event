@@ -100,7 +100,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 10px 0;
     
    }
    .nav-links a {
@@ -251,7 +251,7 @@
    .about,
    .speakers {
     background: #111111;
-    padding: 60px 0;
+    padding: 30px 0;
     font-family: "Maurea-Light";
     font-weight: 500;
     position: relative;
@@ -385,7 +385,7 @@
     background: var(--fourth-color);
    }
    .about.attend {
-    padding: 60px 0;
+    padding: 30px 0;
     background: var(--third-color);
    }
    .about.attend .about-side {
@@ -470,7 +470,7 @@
     opacity: 0.85;
    }
    .agenda {
-    padding: 60px 0;
+    padding: 30px 0;
     font-family: "Maurea-Light";
     font-weight: 500;
     position: relative;
