@@ -686,9 +686,6 @@
     .about .about-details .about-side .features .about-feature .main-img img {
       object-fit: cover;
     }
-    .about .about-details .about-side h2, .speakers h2, .agenda h2 {
-      font-size: 26px;
-    }
     .agenda .agenda-details .date .day {
       width: 100px;
       height: 100px;
@@ -713,6 +710,9 @@
   @media screen and (max-width: 320px) {
     .main-header .title {
       font-size: 24px;
+    }
+    .about .about-details .about-side h2, .speakers h2, .agenda h2 {
+      font-size: 26px;
     }
   }
   .success {
