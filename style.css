@@ -690,6 +690,15 @@
     .agenda .agenda-details .date .month h3, .agenda .agenda-details .date .month p {
       font-size: 26px;
     }
+    .main-header .title {
+      font-size: 34px;
+    }
+    .main-header .header-tag h3 {
+      font-size: 20px;
+    }
+    .main-header .header-tag h2, .about .about-details .about-side .more {
+      font-size: 14px;
+  }
   }
   @media screen and (max-width: 320px) {
     .main-header .title {
