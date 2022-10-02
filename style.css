@@ -574,7 +574,7 @@
   text-align: center;
 }
 #about, #speakers, #agenda {
-  scroll-margin-top: 60px;
+  scroll-margin-top: 70px;
 }
    @media screen and (max-width: 1199px) {
     .main-header {
