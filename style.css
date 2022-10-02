@@ -538,6 +538,7 @@
    .agenda .agendas .side-time .agend-img {
     width: 40px;
     height: 40px;
+    padding: 5px 10px;
     background: var(--second-color);
     line-height: 20px;
     display: flex;
