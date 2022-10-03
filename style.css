@@ -741,3 +741,20 @@
       height: 120px;
     }
   }
+  .iti__country-list {
+    color: var(--second-color) !important;
+  }
+  #phone {
+    padding: 10px 15px 10px 50px;
+  }
+  #phone::placeholder {
+    padding-left: 5px;
+  }
+  .iti {
+    width: 100% !important;
+  }
+  @media screen and (max-width: 767px) {
+    .iti__country-list {
+      width: 200px;
+    }
+  }

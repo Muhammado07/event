@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Johnson Controls Arabia Innovation for a Sustainable Tomorrow"
+      content="Innovation for a Sustainable Tomorrow Johnson Controls Arabia "
     />
     <meta name="theme-color" content="#00539e" />
 
@@ -16,28 +16,32 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
     <!-- Primary Meta Tags -->
     <title>
-      Johnson Controls Arabia | Innovation for a Sustainable Tomorrow
+      Innovation for a Sustainable Tomorrow | Johnson Controls Arabia
     </title>
     <meta
       name="title"
-      content="Johnson Controls Arabia | Innovation for a Sustainable Tomorrow"
+      content="The Innovation Conference will feature government officials and leading figures from the industrial sectors in specialized panel discussions and seminars to shed light on the latest innovative trends and updates on the road towards achieving the Kingdom’s sustainability goals, in light with Saudi Arabia’s pledge to cut its carbon emissions to net zero by 2060, in addition to the distinguished projects and initiatives that are launched to diversify energy sources to increase dependency on renewable energy to 50% by 2030."
     />
     <meta
       name="description"
-      content="Johnson Controls Arabia Innovation for a Sustainable Tomorrow"
+      content="The Innovation Conference will feature government officials and leading figures from the industrial sectors in specialized panel discussions and seminars to shed light on the latest innovative trends and updates on the road towards achieving the Kingdom’s sustainability goals, in light with Saudi Arabia’s pledge to cut its carbon emissions to net zero by 2060, in addition to the distinguished projects and initiatives that are launched to diversify energy sources to increase dependency on renewable energy to 50% by 2030."
     />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
-      content="Johnson Controls Arabia Innovation for a Sustainable Tomorrow"
+      content="Innovation for a Sustainable Tomorrow Johnson Controls Arabia "
     />
     <meta
       property="og:description"
-      content="Johnson Controls Arabia Innovation for a Sustainable Tomorrow"
+      content="Innovation for a Sustainable Tomorrow Johnson Controls Arabia "
     />
     <meta
       property="og:image"
@@ -48,11 +52,11 @@
     <meta property="twitter:card" content="summary_large_image" />
     <meta
       property="twitter:title"
-      content="Johnson Controls Arabia Innovation for a Sustainable Tomorrow"
+      content="Innovation for a Sustainable Tomorrow Johnson Controls Arabia "
     />
     <meta
       property="twitter:description"
-      content="Johnson Controls Arabia Innovation for a Sustainable Tomorrow"
+      content="Innovation for a Sustainable Tomorrow Johnson Controls Arabia "
     />
   </head>
   <body>
@@ -168,7 +172,12 @@
                 </div>
                 <div class="input-box">
                   <p>Mobile Number</p>
-                  <input type="number" placeholder="966555555" required="" />
+                  <input
+                    id="phone"
+                    type="tel"
+                    placeholder="966555555"
+                    required=""
+                  />
                 </div>
                 <div class="input-box">
                   <p>Company Name</p>
@@ -180,12 +189,13 @@
                 </div>
                 <div class="input-box">
                   <p>Position <span>(Optional)</span></p>
-                  <input type="text" placeholder="UI Designer" required="" />
+                  <input type="text" placeholder="CEO" required="" />
                 </div>
                 <div class="input-boxs">
                   <input type="submit" class="send" value="Submit" />
                 </div>
               </form>
+              <div class="alert alert-info" style="display: none"></div>
             </div>
             <!-- Success Message after Submit -->
             <!-- <div class="success">
@@ -401,5 +411,23 @@
         </div>
       </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script>
+      const phoneInputField = document.querySelector("#phone");
+      const phoneInput = window.intlTelInput(phoneInputField, {
+        utilsScript:
+          "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+      });
+      const info = document.querySelector(".alert-info");
+
+      function process(event) {
+        event.preventDefault();
+
+        const phoneNumber = phoneInput.getNumber();
+
+        info.style.display = "";
+        info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
+      }
+    </script>
   </body>
 </html>
