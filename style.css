@@ -449,6 +449,12 @@
     width: 85%;
     margin: 0 auto;
    }
+   .speakers.speaker2 .speaker {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    justify-content: center;
+    align-items: center;
+   }
    .speakers .speaker .details {
     background: var(--fifth-color);
     border-radius: 16px;
@@ -458,15 +464,25 @@
     align-items: center;
     gap: 24px;
    }
+   .speakers.speaker2 .speaker .details {
+    justify-content: flex-start;
+   }
    .speakers .speaker .details img {
     width: 160px;
     height: 160px;
+   }
+   .speakers.speaker2 .speaker .details img {
+    width: 100px;
+    height: 100px;
    }
    .speakers .speaker .details h3 {
     font-weight: 500;
     font-size: 29px;
     line-height: 150%;
     padding-bottom: 8px;
+   }
+   .speakers.speaker2 .speaker .details h3 {
+    font-size: 18px;
    }
    .speakers .speaker .details p {
     font-size: 16px;
@@ -490,7 +506,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 32px;
    }
    .agenda .agenda-details .date {
@@ -680,6 +696,9 @@
     }
     .agenda .agendas .side-time .event-details p {
       font-size: 14px;
+    }
+    .speakers.speaker2 .speaker {
+      grid-template-columns: 1fr;
     }
    }
    @media screen and (max-width: 484px) {
