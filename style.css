@@ -261,7 +261,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 32px;
    }
    .about .about-details .about-side h2 {
