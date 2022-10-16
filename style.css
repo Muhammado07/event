@@ -465,16 +465,9 @@
     align-items: center;
     gap: 24px;
    }
-   .speakers.speaker2 .speaker .details {
-    justify-content: flex-start;
-   }
    .speakers .speaker .details img {
     width: 80px;
     height: 80px;
-   }
-   .speakers.speaker2 .speaker .details img {
-    width: 100px;
-    height: 100px;
    }
    .speakers .speaker .details h3 {
     font-weight: 500;
@@ -483,13 +476,30 @@
     padding-bottom: 4px;
    }
    .speakers.speaker2 .speaker .details h3 {
-    font-size: 18px;
+    font-size: 20px;
+   }
+   .speakers.speaker2 .speaker .details h4 {
+    font-family: "Maurea-Light";
+    font-weight: 500;
+    font-size: 14px;
    }
    .speakers .speaker .details p {
     font-size: 14px;
     line-height: 150%;
     opacity: 0.85;
    }
+   .speakers .speaker .details .presen {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+   }
+   .speakers .speaker .details .presen img {
+    width: 16px;
+    height: 16px;
+   }
+
    .agenda {
     padding: 30px 0;
     font-family: "Maurea-Light";
