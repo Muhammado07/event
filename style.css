@@ -190,17 +190,35 @@
     font-family: "Maurea-Light";
     font-weight: 500;
    }
+   .main-header.second-bg {
+    background: url('./img/saudi-bg.png') top center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 95vh;
+    position: relative;
+    margin-top: 0px;
+    color: var(--third-color);
+    font-family: "Maurea-Light";
+    font-weight: 500;
+   }
    .main-header .header {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80vh;
    }
+   .main-header.second-bg .header {
+    height: 90vh;
+   }
    .main-header .header > div {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+   }
+   .main-header.second-bg .header > div {
+    position: absolute;
+    bottom: 30px;
    }
    .main-header .title {
     font-size: 75px;
@@ -613,7 +631,8 @@
   scroll-margin-top: 70px;
 }
    @media screen and (max-width: 1199px) {
-    .main-header {
+    .main-header,
+    .main-header.second-bg {
       height: 100%;
     }
     .main-header .title {
@@ -643,6 +662,13 @@
       padding-left: 15px;
       padding-right: 15px;
     }
+    .main-header.second-bg {
+      background: url('./img/saudi-bg-mob.png') top center no-repeat;
+      background-size: cover;
+     }
+     .main-header.second-bg .header {
+      height: 70vh;
+     }
     .about.attend,.about, .speakers, .agenda {
       padding: 30px 0;
     }
@@ -757,7 +783,19 @@
       font-size: 14px;
   }
   }
+  @media screen and (max-width: 380px) {
+    .main-header.second-bg .header > div {
+      bottom: 5px;
+    }
+  }
   @media screen and (max-width: 320px) {
+    .main-header.second-bg .header {
+      height: 100vh;
+  }
+  .main-header.second-bg .header > div {
+    bottom: 10px;
+    left: 10px;
+  }
     .main-header .title {
       font-size: 24px;
     }
