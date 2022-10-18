@@ -288,7 +288,6 @@
    .about .about-details .about-side .more a {
     text-decoration: underline;
     font-weight: 600;
-    color: var(--third-color);
    }
    .about.attend .about-details .about-side .more {
     margin-bottom: 8px;
