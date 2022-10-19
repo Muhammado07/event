@@ -444,6 +444,18 @@
    .about.attend .register-now a:hover {
     background: var(--fourth-color);
    }
+   .speakers .speaker .details .mastery {
+    position: absolute;
+    background: var(--fourth-color);
+    color: var(--second-color);
+    padding: 8px 12px;
+    width: fit-content;
+    border-radius: 0 16px 0 2px;
+    font-size: 14px;
+    top: 0;
+    right: 0;
+   }
+   .speakers.main-speaker 
    .speakers h2 {
     font-size: 62px;
     padding-bottom: 20px;
@@ -451,6 +463,13 @@
     font-weight: 600;
     text-align: center;
    }
+   .speakers h2 {
+    font-size: 62px;
+    padding-bottom: 20px;
+    font-family: "Maurea-BoldLf";
+    font-weight: 600;
+    text-align: center;
+  }
    .speakers .speaker {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -475,6 +494,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: 24px;
+    position: relative;
    }
    .speakers .speaker .details img {
     width: 80px;
