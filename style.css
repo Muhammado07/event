@@ -112,7 +112,7 @@
    /* LOGO */
    .logo {
     width: 121px;
-    height: auto;
+    height: 100%;
    }
    .logo img {
     width: 100%;
@@ -635,6 +635,11 @@
 #about, #speakers, #agenda {
   scroll-margin-top: 70px;
 }
+.topicy {
+  font-size: 28px;
+  padding-bottom: 20px;
+  text-align: left;
+}
    @media screen and (max-width: 1199px) {
     .main-header,
     .main-header.second-bg {
@@ -753,6 +758,12 @@
     }
     .speakers.speaker2 .speaker {
       grid-template-columns: 1fr;
+    }
+    .topicy {
+      font-size: 20px;
+    }
+    .speakers {
+      margin-top: -1px;
     }
    }
    @media screen and (max-width: 484px) {
